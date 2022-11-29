@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "name": "Zanahoria",
+      "price": "1.50",
+      "description": "Zanahoria de 1kg",
+      "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
+    },
+    {
+      "id": "2",
+      "name": "Zanahoria",
+      "price": "1.50",
+      "description": "Zanahoria de 1kg",
+      "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
+    },
+    {
+      "id": "3",
+      "name": "Zanahoria",
+      "price": "1.50",
+      "description": "Zanahoria de 1kg",
+      "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
+    },
+    {
+      "id": "4",
+      "name": "Zanahoria",
+      "price": "1.50",
+      "description": "Zanahoria de 1kg",
+      "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
+    },
+    {
+      "id": "5",
+      "name": "Zanahoria",
+      "price": "1.50",
+      "description": "Zanahoria de 1kg",
+      "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
+    },
+    {
+      "id": "6",
+      "name": "Zanahoria",
+      "price": "1.50",
+      "description": "Zanahoria de 1kg",
+      "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
+    },
+    {
+      "id": "7",
+      "name": "Zanahoria",
+      "price": "1.50",
+      "description": "Zanahoria de 1kg",
+      "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
+    },
+    {
+      "id": "8",
+      "name": "Zanahoria",
+      "price": "1.50",
+      "description": "Zanahoria de 1kg",
+      "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
+    },
+    {
+      "id": "9",
+      "name": "Zanahoria",
+      "price": "1.50",
+      "description": "Zanahoria de 1kg",
+      "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
+    },
+    {
+      "id": "10",
+      "name": "Zanahoria",
+      "price": "1.50",
+      "description": "Zanahoria de 1kg",
+      "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
+    }
+  ]
+}
