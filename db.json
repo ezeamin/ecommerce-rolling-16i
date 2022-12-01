@@ -1,18 +1,11 @@
 {
   "items": [
     {
-      "id": "1",
       "name": "Zanahoria",
-      "price": "1.50",
+      "price": "1.5",
       "description": "Zanahoria de 1kg",
-      "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
-    },
-    {
-      "id": "2",
-      "name": "Zanahoria",
-      "price": "1.50",
-      "description": "Zanahoria de 1kg",
-      "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
+      "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000",
+      "id": "1"
     },
     {
       "id": "3",
@@ -22,25 +15,18 @@
       "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
     },
     {
-      "id": "4",
-      "name": "Zanahoria",
-      "price": "1.50",
-      "description": "Zanahoria de 1kg",
-      "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
+      "name": "Frutilla",
+      "price": "200",
+      "description": "Frutilla de estacion",
+      "image": "https://jumboargentina.vtexassets.com/arquivos/ids/421110/Frutilla-Por-Kg-1-10917.jpg?v=636481016510630000",
+      "id": "4"
     },
     {
-      "id": "5",
-      "name": "Zanahoria",
+      "name": "Banana",
       "price": "1.50",
-      "description": "Zanahoria de 1kg",
-      "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
-    },
-    {
-      "id": "6",
-      "name": "Zanahoria",
-      "price": "1.50",
-      "description": "Zanahoria de 1kg",
-      "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
+      "description": "Banana",
+      "image": "https://carrefourar.vtexassets.com/arquivos/ids/209557/2300453000007_02.jpg?v=637650839143130000",
+      "id": "5"
     },
     {
       "id": "7",
@@ -64,11 +50,25 @@
       "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
     },
     {
-      "id": "10",
+      "id": "11",
       "name": "Zanahoria",
       "price": "1.50",
       "description": "Zanahoria de 1kg",
       "image": "https://img.freepik.com/fotos-premium/zanahoria-entera-aislada_88281-1988.jpg?w=2000"
+    },
+    {
+      "id": 46018123,
+      "name": "Pera",
+      "price": "15",
+      "description": "hola soy una pera",
+      "image": "http://www.frutas-hortalizas.com/img/fruites_verdures/presentacio/26.jpg"
+    },
+    {
+      "id": 56131449,
+      "name": "Manzana",
+      "price": "16",
+      "description": "1234",
+      "image": "https://elegifruta.com.ar/onepage/wp-content/uploads/2017/07/manzana_roja.jpg"
     }
   ]
 }
