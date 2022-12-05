@@ -11,7 +11,10 @@ const Navbar = () => {
   return (
     <NavbarBS bg='dark' variant='dark' expand='lg'>
       <Container>
-        <NavbarBS.Brand onClick={() => handleClick('/')} style={{cursor: "pointer"}}>
+        <NavbarBS.Brand
+          onClick={() => handleClick('/')}
+          style={{ cursor: 'pointer' }}
+        >
           Rolling Market
         </NavbarBS.Brand>
         <NavbarBS.Toggle aria-controls='navbar-market' />
@@ -19,6 +22,13 @@ const Navbar = () => {
           <Nav className='ms-auto'>
             <Button variant='danger' onClick={() => handleClick('/admin')}>
               Admin
+            </Button>
+            <Button
+              variant='primary'
+              className='ms-2'
+              onClick={() => handleClick('/login')}
+            >
+              Login
             </Button>
             {/* Link o NavLink  */}
           </Nav>

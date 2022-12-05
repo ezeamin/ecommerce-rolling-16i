@@ -43,7 +43,6 @@ const ItemsForm = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log('entre :P');
     if (validateData(nombre, precio, descripcion, imagen)) {
       // guardo los datos
       console.log('datos VALIDOS');

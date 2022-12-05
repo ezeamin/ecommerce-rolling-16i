@@ -69,6 +69,13 @@
       "price": "16",
       "description": "1234",
       "image": "https://elegifruta.com.ar/onepage/wp-content/uploads/2017/07/manzana_roja.jpg"
+    },
+    {
+      "id": 66994765,
+      "name": "Sandia",
+      "price": "26",
+      "description": "Una sandia barata\n",
+      "image": "https://frutasolivar.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2020/07/31606320_s-1.jpg.webp"
     }
   ]
 }
