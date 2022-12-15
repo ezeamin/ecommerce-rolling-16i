@@ -14,7 +14,7 @@ const ItemsTable = (props) => {
 
   useEffect(() => {
     const itemsFetch = async () => {
-      const data = await axios.get(`${baseUrl}/items`);
+      const data = await axios.get(`${baseUrl}/products`);
       setItems(data.data);
     };
 

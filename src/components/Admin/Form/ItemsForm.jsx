@@ -19,7 +19,7 @@ const ItemsForm = (props) => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const res = await axios.get(`${baseUrl}/items`);
+      const res = await axios.get(`${baseUrl}/products`);
 
       const items = res.data;
 
@@ -49,7 +49,7 @@ const ItemsForm = (props) => {
 
       //   Caso EDITAR
       if (modifyingItem) {
-        const res = await axios.put(`${baseUrl}/items/${modifyingItem}`, {
+        const res = await axios.put(`${baseUrl}/product/${modifyingItem}`, {
           name: nombre,
           price: precio,
           description: descripcion,
@@ -82,15 +82,14 @@ const ItemsForm = (props) => {
       }
 
       //   Caso CREAR
-      const res = await axios.post(`${baseUrl}/items`, {
-        id: getRandomId(),
+      const res = await axios.post(`${baseUrl}/product`, {
         name: nombre,
         price: precio,
         description: descripcion,
         image: imagen,
       });
 
-      if (res.status === 201) {
+      if (res.status === 200) {
         Swal.fire({
           title: 'Operacion exitosa',
           text: 'Elemento agregado correctamente',

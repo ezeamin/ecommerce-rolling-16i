@@ -24,7 +24,7 @@ const ItemsTableItem = (props) => {
     }).then(async (res) => {
       if (res.isConfirmed) {
         //eliminar
-        const res = await axios.delete(`${baseUrl}/items/${id}`);
+        const res = await axios.delete(`${baseUrl}/product/${id}`);
 
         if (res.status === 200) {
           Swal.fire({

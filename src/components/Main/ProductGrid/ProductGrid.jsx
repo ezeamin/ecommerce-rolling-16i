@@ -12,7 +12,7 @@ const ProductGrid = () => {
     const itemsFetch = async () => {
       // http://localhost:3004/items
       // https://miapi.heroku.app
-      const data = await axios.get(`${baseUrl}/items`);
+      const data = await axios.get(`${baseUrl}/products`);
       setItems(data.data);
     };
 
