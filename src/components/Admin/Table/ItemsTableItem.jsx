@@ -1,8 +1,6 @@
-import axios from 'axios';
+import axios from '../../../api/axios';
 import { Button } from 'react-bootstrap';
 import Swal from 'sweetalert2';
-
-const baseUrl = process.env.REACT_APP_BASE_URL;
 
 const ItemsTableItem = (props) => {
   const { id, name, price, image, description, setModifyingItem } = props;
@@ -24,7 +22,7 @@ const ItemsTableItem = (props) => {
     }).then(async (res) => {
       if (res.isConfirmed) {
         //eliminar
-        const res = await axios.delete(`${baseUrl}/product/${id}`);
+        const res = await axios.delete(`/product/${id}`);
 
         if (res.status === 200) {
           Swal.fire({

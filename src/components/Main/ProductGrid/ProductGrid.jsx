@@ -1,9 +1,7 @@
-import axios from 'axios';
+import axios from '../../../api/axios';
 import { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import ProductItem from '../ProductItem/ProductItem';
-
-const baseUrl = process.env.REACT_APP_BASE_URL;
 
 const ProductGrid = () => {
   const [items, setItems] = useState([]);
@@ -12,7 +10,7 @@ const ProductGrid = () => {
     const itemsFetch = async () => {
       // http://localhost:3004/items
       // https://miapi.heroku.app
-      const data = await axios.get(`${baseUrl}/products`);
+      const data = await axios.get(`/products`);
       setItems(data.data);
     };
 
