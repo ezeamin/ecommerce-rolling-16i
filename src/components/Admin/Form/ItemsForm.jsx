@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from '../../../api/axios';
 
 import { Button, Container, Form } from 'react-bootstrap';
 
 import { validateData } from '../../../helpers/validateData';
-import { getRandomId } from '../../../helpers/getRandomId';
-import Swal from 'sweetalert2';
 
-const baseUrl = process.env.REACT_APP_BASE_URL;
+import Swal from 'sweetalert2';
 
 const ItemsForm = (props) => {
   const { modifyingItem } = props;
@@ -19,7 +17,7 @@ const ItemsForm = (props) => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const res = await axios.get(`${baseUrl}/items`);
+      const res = await axios.get(`/products`);
 
       const items = res.data;
 
@@ -49,7 +47,7 @@ const ItemsForm = (props) => {
 
       //   Caso EDITAR
       if (modifyingItem) {
-        const res = await axios.put(`${baseUrl}/items/${modifyingItem}`, {
+        const res = await axios.put(`/product/${modifyingItem}`, {
           name: nombre,
           price: precio,
           description: descripcion,
@@ -82,15 +80,14 @@ const ItemsForm = (props) => {
       }
 
       //   Caso CREAR
-      const res = await axios.post(`${baseUrl}/items`, {
-        id: getRandomId(),
+      const res = await axios.post(`/product`, {
         name: nombre,
         price: precio,
         description: descripcion,
         image: imagen,
       });
 
-      if (res.status === 201) {
+      if (res.status === 200) {
         Swal.fire({
           title: 'Operacion exitosa',
           text: 'Elemento agregado correctamente',
