@@ -12,7 +12,7 @@ const ItemsTable = (props) => {
 
   useEffect(() => {
     const itemsFetch = async () => {
-      const data = await axios.get(`/products`);
+      const data = await axios().get(`/products`);
       setItems(data.data);
     };
 

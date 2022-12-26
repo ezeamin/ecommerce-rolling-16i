@@ -15,7 +15,6 @@ import axios from 'axios';
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
-// TODO: Revisar por qué sigue trayendo el token anterior
 const myAxios = () => {
   const token = sessionStorage.getItem('token');
 
@@ -27,4 +26,4 @@ const myAxios = () => {
   });
 };
 
-export default myAxios();
+export default myAxios;

@@ -15,7 +15,7 @@ const LoginForm = () => {
 
   const handleSubmit = async (data) => {
     try {
-      const response = await axios.post('/login', {
+      const response = await axios().post('/login', {
         username: data.user,
         password: data.password,
       });
