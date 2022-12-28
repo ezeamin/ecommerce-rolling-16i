@@ -12,8 +12,8 @@ const ItemsTable = (props) => {
 
   useEffect(() => {
     const itemsFetch = async () => {
-      const data = await axios().get(`/products`);
-      setItems(data.data);
+      const data = await axios().get(`/expenses`);
+      setItems(data.data.data);
     };
 
     itemsFetch();
@@ -24,10 +24,9 @@ const ItemsTable = (props) => {
       <thead>
         <tr>
           <th>#</th>
-          <th>Nombre</th>
+          <th>Concepto</th>
+          <th>Fecha</th>
           <th>Precio</th>
-          <th>Imagen</th>
-          <th>Descripcion</th>
           <th>Acciones</th>
         </tr>
       </thead>
@@ -35,7 +34,7 @@ const ItemsTable = (props) => {
         {items.map((elemento) => {
           return (
             <ItemsTableItem
-              key={elemento.id}
+              key={elemento.expenseID}
               {...elemento}
               setModifyingItem={setModifyingItem}
             />

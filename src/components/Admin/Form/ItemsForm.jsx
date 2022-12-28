@@ -10,27 +10,30 @@ import Swal from 'sweetalert2';
 const ItemsForm = (props) => {
   const { modifyingItem } = props;
 
-  const [nombre, setNombre] = useState();
+  const [concepto, setConcepto] = useState();
   const [precio, setPrecio] = useState();
-  const [descripcion, setDescripcion] = useState();
-  const [imagen, setImagen] = useState();
+  const [fecha, setFecha] = useState();
 
   useEffect(() => {
     const fetchItems = async () => {
-      const res = await axios().get(`/products`);
+      const res = await axios().get(`/expenses`);
 
-      const items = res.data;
+      const items = res.data.data;
 
       const itemToModify = items.find(
-        (element) => element.id === modifyingItem
+        (element) => element.expenseID === modifyingItem
       );
 
       console.log(itemToModify);
 
-      setNombre(itemToModify.name); //nombre del elemento con tal id
-      setPrecio(itemToModify.price);
-      setDescripcion(itemToModify.description);
-      setImagen(itemToModify.image);
+      const date = new Date(itemToModify.date);
+      const year = date.getFullYear();
+      const month = date.getMonth();
+      const day = date.getDate();
+
+      setConcepto(itemToModify.concept); //nombre del elemento con tal id
+      setPrecio(itemToModify.amount);
+      setFecha(`${year}-${month}-${day}`);
     };
 
     if (modifyingItem) {
@@ -41,17 +44,17 @@ const ItemsForm = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (validateData(nombre, precio, descripcion, imagen)) {
+    if (validateData(concepto, precio, fecha)) {
       // guardo los datos
       console.log('datos VALIDOS');
 
       //   Caso EDITAR
       if (modifyingItem) {
-        const res = await axios().put(`/product/${modifyingItem}`, {
-          name: nombre,
-          price: precio,
-          description: descripcion,
-          image: imagen,
+        const res = await axios().put(`/expense`, {
+          date: fecha,
+          amount: precio,
+          concept: concepto,
+          expenseId: modifyingItem,
         });
 
         if (res.status === 200) {
@@ -80,11 +83,10 @@ const ItemsForm = (props) => {
       }
 
       //   Caso CREAR
-      const res = await axios().post(`/product`, {
-        name: nombre,
-        price: precio,
-        description: descripcion,
-        image: imagen,
+      const res = await axios().post(`/expense`, {
+        date: fecha,
+        amount: precio,
+        concept: concepto,
       });
 
       if (res.status === 200) {
@@ -132,11 +134,11 @@ const ItemsForm = (props) => {
         <h2>{modifyingItem ? 'Editar item' : 'Crear item'}</h2>
         <hr />
         <Form.Group>
-          <Form.Label>Nombre</Form.Label>
+          <Form.Label>Concepto</Form.Label>
           <Form.Control
             type='text'
-            value={nombre}
-            onChange={(e) => setNombre(e.target.value)}
+            value={concepto}
+            onChange={(e) => setConcepto(e.target.value)}
           />
         </Form.Group>
         <Form.Group className='mt-2'>
@@ -148,22 +150,11 @@ const ItemsForm = (props) => {
           />
         </Form.Group>
         <Form.Group className='mt-2'>
-          <Form.Label>Imagen</Form.Label>
+          <Form.Label>Fecha</Form.Label>
           <Form.Control
-            type='url'
-            value={imagen}
-            onChange={(e) => setImagen(e.target.value)}
-          />
-        </Form.Group>
-        <Form.Group className='mt-2'>
-          <Form.Label>Descripcion</Form.Label>
-          <Form.Control
-            as='textarea'
-            rows='3'
-            type='text'
-            value={descripcion}
-            onChange={(e) => setDescripcion(e.target.value)}
-            style={{ resize: 'none' }}
+            type='date'
+            value={fecha}
+            onChange={(e) => setFecha(e.target.value)}
           />
         </Form.Group>
         <div className='text-end mt-2'>

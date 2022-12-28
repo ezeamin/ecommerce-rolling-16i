@@ -3,15 +3,15 @@ import { Button } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 
 const ItemsTableItem = (props) => {
-  const { id, name, price, image, description, setModifyingItem } = props;
+  const { expenseID, concept, date, amount, setModifyingItem } = props;
 
   const handleEdit = () => {
-    console.log('editar', id);
-    setModifyingItem(id);
+    console.log('editar', expenseID);
+    setModifyingItem(expenseID);
   };
 
   const handleDelete = () => {
-    console.log('eliminar', id);
+    console.log('eliminar', expenseID);
 
     Swal.fire({
       title: 'Eliminar',
@@ -22,7 +22,7 @@ const ItemsTableItem = (props) => {
     }).then(async (res) => {
       if (res.isConfirmed) {
         //eliminar
-        const res = await axios().delete(`/product/${id}`);
+        const res = await axios().delete(`/expense/${expenseID}`);
 
         if (res.status === 200) {
           Swal.fire({
@@ -52,13 +52,10 @@ const ItemsTableItem = (props) => {
 
   return (
     <tr>
-      <td>{id}</td>
-      <td>{name}</td>
-      <td>{price}</td>
-      <td>
-        <img src={image} className='img_table' alt={name} />
-      </td>
-      <td>{description}</td>
+      <td>{expenseID}</td>
+      <td>{concept}</td>
+      <td>{date}</td>
+      <td>{amount}</td>
       <td>
         <Button variant='primary' className='me-1' onClick={handleEdit}>
           Editar

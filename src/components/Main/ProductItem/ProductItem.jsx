@@ -1,17 +1,15 @@
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 const ProductItem = (props) => {
-  const { id, name, description, price, image } = props;
+  const { id, concept, amount, date } = props;
 
   return (
     <Card>
-      <Card.Img variant='top' src={image} />
       <Card.Body>
-        <Card.Title className='text-dark'>{name}</Card.Title>
-        <Card.Text className='text-dark'>{description}</Card.Text>
+        <Card.Title className='text-dark'>{new Date(date).toLocaleDateString()}</Card.Title>
+        <Card.Text className='text-dark'>{concept}</Card.Text>
         <div className='text-end'>
-          <h5 className='text-dark'>$ {price}</h5>
-          <Button variant='danger'>Agregar a carrito</Button>
+          <h5 className='text-dark'>$ {amount}</h5>
         </div>
       </Card.Body>
     </Card>

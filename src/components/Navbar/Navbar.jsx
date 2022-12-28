@@ -15,7 +15,7 @@ const Navbar = () => {
           onClick={() => handleClick('/')}
           style={{ cursor: 'pointer' }}
         >
-          Rolling Market
+          Rolling Expenses
         </NavbarBS.Brand>
         <NavbarBS.Toggle aria-controls='navbar-market' />
         <NavbarBS.Collapse id='navbar-market'>
